@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    max-width: 1024px;
+    width: 100%;
+    height: 100%;
+    min-height: 740px;
+    background: linear-gradient(#a4a3f3, #ace9d7);
+    background-size: cover;
+}
+
+h1 {
+    color: orangered;
+    text-align: center;
+
+}
+
+p {
+    margin: 10%;
+    padding-left: 33%;
+}
