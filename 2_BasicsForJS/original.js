@@ -51,24 +51,21 @@ learnJS('JavaScript', done); */
 
 const obj = new Object();
 const options = {
-    name: 'test',
-    width: 1024,
-    height: 1024,
-    colors: {
-        border: 'black',
-        bg: 'red'
-    },
-    makeTest: function () {
-        console.log('Test');
-    }
+	name: 'test',
+	width: 1024,
+	height: 1024,
+	colors: {
+		border: 'black',
+		bg: 'red'
+	},
+	makeTest: function() {
+		console.log('Test');
+	}
 };
 
 //options.makeTest();
 
-const {
-    border,
-    bg
-} = options.colors;
+const { border, bg } = options.colors;
 console.log(border);
 console.log(bg);
 
@@ -77,7 +74,6 @@ console.log(bg);
 delete options.name;
 
 console.log(options); */
-
 
 /* let counter = 0;
 for (let key in options) {
@@ -96,3 +92,40 @@ for (let key in options) {
 //console.log(counter)
 
 //console.log(Object.keys(options).length);
+
+let string = 'DfdfdfD Ddfdf D fd';
+/*let newString;
+for (let value of string) {
+    console.log(string);
+}
+
+console.log(newString); */
+
+//const arr = [ 1, 2, 3, 4, 6, 10 ];
+
+/* arr.pop();
+arr.push(10);
+
+console.log(arr);
+
+for (let value of arr) {
+    console.log(value);
+} */
+
+/* arr.forEach(function(item, i, arr) {
+	console.log(`${i}: ${item} in a ${arr}`);
+}); */
+
+/* for (let i = 0; i < string.length; i++) {
+    console.log(string[i]);
+    if (string[i] === 'd') {
+        toUpperCase(string[i]);
+    }
+}
+
+console.log(string); */
+
+const str = prompt('', '');
+
+const products = str.split(',');
+console.log(products);
