@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 /*****Learn JavaScript */
 /* let a = (1, 5 - 1) * 2;
 
@@ -201,7 +201,7 @@ if (userName == 'Админ') {
 
 //Задание на урок:
 
-let numberOfFilms;
+/* let numberOfFilms;
 
 function start() {
 	numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
@@ -211,9 +211,9 @@ function start() {
 
 
 }
-
+ */
 //start();
-
+/* 
 const personalMovieDB = {
 	count: numberOfFilms,
 	movies: {},
@@ -236,15 +236,11 @@ function rememberMyFilms() {
 			i--;
 		}
 	}
-}
+} */
 
 //rememberMyFilms()
 
-
-
-
-
-function detectPersonalLevel() {
+/* function detectPersonalLevel() {
 	if (personalMovieDB.count < 10) {
 		console.log('Просмотрено довольно мало фильмов');
 	} else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
@@ -254,12 +250,12 @@ function detectPersonalLevel() {
 	} else {
 		console.log('error');
 	}
-}
+} */
 
 //detectPersonalLevel();
 
 //console.log(personalMovieDB);
-
+/* 
 function showMyDB(hidden) {
 	if (!hidden) {
 		console.log(personalMovieDB);
@@ -275,4 +271,246 @@ function writeYourGenres() {
 	}
 }
 
-writeYourGenres();
+writeYourGenres(); */
+/* spread */
+
+/* let a = 5,
+  b = a;
+
+b = b + 5;
+
+console.log(a);
+console.log(b);
+
+const obj = {
+  a: 5,
+  b: 1
+};
+
+const copy = obj; */
+
+/* function copy(mainObj) {
+  let objCopy = {};
+  let key;
+  for (let key in mainObj) {
+    objCopy[key] = mainObj[key];
+  }
+
+  return objCopy;
+}
+
+const numbers = {
+  a: 2,
+  b: 5,
+  c: {
+    x: 7,
+    y: 4
+  }
+};
+
+const newNumbers = copy(numbers);
+newNumbers.a = 10;
+
+console.log(numbers);
+console.log(newNumbers);
+ */
+
+/* const soldier = {
+  health: 400,
+  armor: 100,
+  sayHello: function () {
+    console.log(`Hello`);
+  }
+};
+
+const john = Object.create(soldier); */
+/* 
+john.__proto__ = soldier; */
+
+/* Object.setPrototypeOf(john, soldier);
+
+console.log(john);
+
+john.sayHello();
+ */
+
+/* var animals = [
+  { species: "Лев", name: "Король" },
+  { species: "Кит", name: "Фэйл" }
+];
+
+for (var i = 0; i < animals.length; i++) {
+  (function (i) {
+    this.print = function () {
+      console.log("#" + i + " " + this.species + ": " + this.name);
+    };
+    this.print();
+  }.call(animals[i], i));
+}
+ */
+
+//people
+
+/* fetch("https://api.tvmaze.com/people?page=1")
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    console.log(data);
+	});
+	
+	 */
+//shows
+
+/* 	fetch("http://api.tvmaze.com/shows")
+		.then((response) => {
+			return response.json();
+		})
+		.then((data) => {
+			data.map((item) => {
+				console.log(item)
+			})
+		});
+	 */
+
+console.log(`hi`);
+
+let str = `12345`;
+
+console.log(str);
+
+//let newArr = str.split(``).map((item) => item).reduce((acc, sum) => acc + sum);
+let newArr = str
+  .split(``)
+  .map((item) => +item)
+  .reduce((acc, sum) => (acc + sum) / sum);
+console.log(newArr);
+
+let counter = (num) => {
+  let time = 0;
+  return () => {
+    return num + time++;
+  };
+};
+
+let newCounter = counter(2);
+
+console.log(newCounter());
+console.log(newCounter());
+console.log(newCounter());
+
+/* let min = (x, y) => {
+  if (x < y) {
+    return x;
+  } else {
+    return y;
+  }
+};
+ */
+function min(a, b) {
+  return a < b ? a : b;
+}
+
+console.log(min(0, 10));
+console.log(min(0, -10));
+/* function power(base, exponent) {
+  if (exponent == 0)
+    return 1;
+  else
+    return base * power(base, exponent - 1);
+}
+
+console.log(power(2, 3)); */
+// → 8
+
+/* function isEven(num) {
+  if (num % (num - 2) === 0) {
+    return true;
+  } else {
+    return false;
+  }
+} */
+
+
+function isEven(n) {
+	if (n == 0) return true;
+	else if (Math.abs(n) == 1) return false;
+	else return isEven(Math.abs(n - 2));
+
+}
+
+
+console.log(isEven(50));
+console.log(isEven(75));
+console.log(isEven(-1));
+
+//console.log(isEven(Math.abs(75 - 2)))
+
+function countChar(str, char) {
+	let countChar = 0;
+		for (let i = 0; i < str.length; i++) {
+			if (str[i] === char) {
+				countChar++;
+			}
+			
+		}
+	return countChar;
+}
+
+console.log(countChar('bobby', 'b'))
+
+
+let obj = {
+	name: 'John',
+	date: 12,
+
+
+	obj2: {
+		name: 'John2',
+		date: 13,
+
+		obj3: {
+			name: 'Bobby',
+			date: 14
+		}
+	}
+}
+console.log(Object.values(obj.obj2.obj3))
+const newObj = JSON.stringify(obj);
+console.log(newObj.split(' '))
+
+for (let key in obj) {
+	if(obj[key] == 'name')
+	console.log(obj[key])
+}
+
+const tree = {​
+  name: 'Ivan',
+  children: [
+    {​
+      name: 'Igor',
+      children: [],
+    }​,
+    {​
+      name: 'Anna',
+      children: [
+        {​
+          name: 'Max',
+        }​,
+      ],
+    }​,
+  ],
+}​;
+const returnNames = (obj) => {​
+  const names = [];
+  names.push(obj.name);
+  if (obj.children && obj.children.length) {​
+    const subNames = obj.children.reduce((acc, item) => {​
+      acc.push(...returnNames(item));
+      return acc;
+    }​, []);
+    names.push(...subNames);
+  }​
+  return names;
+}​;
+console.log(returnNames(tree));

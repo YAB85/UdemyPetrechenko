@@ -21,7 +21,7 @@
 
 Проверить, чтобы все работало без ошибок в консоли */
 
-'use strict';
+"use strict";
 
 /* function first() {
     //Do something
@@ -49,7 +49,7 @@ function done() {
 
 learnJS('JavaScript', done); */
 
-const obj = new Object();
+/* const obj = new Object();
 const options = {
 	name: 'test',
 	width: 1024,
@@ -61,15 +61,13 @@ const options = {
 	makeTest: function() {
 		console.log('Test');
 	}
-};
+}; */
 
 //options.makeTest();
-
+/* 
 const { border, bg } = options.colors;
 console.log(border);
-console.log(bg);
-
-/* console.log(options.name);
+console.log(bg) */ /* console.log(options.name);
 
 delete options.name;
 
@@ -93,7 +91,7 @@ for (let key in options) {
 
 //console.log(Object.keys(options).length);
 
-let string = 'DfdfdfD Ddfdf D fd';
+let string = "DfdfdfD Ddfdf D fd";
 /*let newString;
 for (let value of string) {
     console.log(string);
@@ -124,8 +122,9 @@ for (let value of arr) {
 }
 
 console.log(string); */
-
+/* 
 const str = prompt('', '');
 
 const products = str.split(',');
 console.log(products);
+ */
